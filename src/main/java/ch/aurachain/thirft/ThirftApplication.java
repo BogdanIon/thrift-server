@@ -56,8 +56,14 @@ public class ThirftApplication {
         crossPlatform1.setUserSet(emailsSet);
         crossPlatform1.setIsAdmin(true);
         crossPlatform1.setUserType(UserType.ADMIN);
+        crossPlatform1.setSalutation("Mr");
+
+        CrossPlatformResource crossPlatform2 = new CrossPlatformResource();
+        crossPlatform2.setId(2);
+        crossPlatform2.setEmails(emails);
 
         crossPlatformResourceMap.put(1, crossPlatform1);
+        crossPlatformResourceMap.put(2, crossPlatform2);
         return new CrossPlatformRepository(crossPlatformResourceMap);
     }
 
