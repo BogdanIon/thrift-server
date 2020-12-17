@@ -5,6 +5,7 @@ import ch.aurachain.thirft.generated.CrossPlatformResource;
 import ch.aurachain.thirft.generated.CrossPlatformService;
 import ch.aurachain.thirft.generated.UserType;
 import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TProtocolFactory;
 import org.apache.thrift.server.TServlet;
 import org.apache.thrift.transport.TTransportException;
@@ -26,7 +27,7 @@ public class ThirftApplication {
 
     @Bean
     public TProtocolFactory tProtocolFactory() {
-        return new TBinaryProtocol.Factory();
+        return new TCompactProtocol.Factory();
     }
 
     @Bean
